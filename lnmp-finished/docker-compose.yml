@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+    web-lnmp:
+        tty: true
+        image: sailengsi/centos-lnmp-org-v1.5
+        ports:
+            - "80:80"
+        volumes:
+            - "./apps/:/data/websites/apps/"
+            - "./php/:/usr/local/php"
+            - "./mysql/:/usr/local/mysql"
+            - "./nginx/:/usr/local/nginx"
